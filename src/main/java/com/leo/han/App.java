@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.leo.han.jackson.Address;
 import com.leo.han.jackson.Employee;
 import com.leo.han.jackson.JacksonHelper;

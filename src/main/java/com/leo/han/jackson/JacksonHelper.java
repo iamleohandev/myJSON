@@ -8,14 +8,22 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JacksonHelper<T> {
 
+	private ObjectMapper objectMapper;
+
+	public JacksonHelper() {
+
+		objectMapper = new ObjectMapper();
+	}
+
 	public String ObjectToJSON(T object) throws JsonProcessingException {
-		String json = new ObjectMapper().writeValueAsString(object);
+		String json = objectMapper.writeValueAsString(object);
 		return json;
 	}
 
-	public T JSONToObject(String json, Class<T> clazz) throws JsonParseException, JsonMappingException, IOException {
-		T object = new ObjectMapper().readValue(json, clazz);
-          return object;
+	public T JSONToObject(String json, Class<T> clazz)
+			throws JsonParseException, JsonMappingException, IOException {
+		T object = objectMapper.readValue(json, clazz);
+		return object;
 	}
 
 }
