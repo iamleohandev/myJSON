@@ -1,4 +1,4 @@
-package com.leo.han.jackson;
+package com.leo.han.beans;
 
 import java.util.Arrays;
 import java.util.List;

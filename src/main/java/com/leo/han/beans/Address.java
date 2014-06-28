@@ -1,4 +1,4 @@
-package com.leo.han.jackson;
+package com.leo.han.beans;
 
 public class Address {
     
