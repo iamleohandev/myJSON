@@ -1,6 +1,7 @@
 package com.leo.han.beans;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,6 +40,8 @@ public class EmployeeFactory {
 		props.put("salary", "1000 Rs");
 		props.put("age", "28 years");
 		emp.setProperties(props);
+		
+		emp.setStartDate(new Date());
 
 		return emp;
 	}

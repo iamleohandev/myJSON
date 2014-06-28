@@ -1,6 +1,7 @@
 package com.leo.han.beans;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -14,6 +15,7 @@ public class Employee {
     private String role;
     private List<String> cities;
     private Map<String, String> properties;
+    private Date startDate;
      
     public int getId() {
         return id;
@@ -52,7 +54,14 @@ public class Employee {
         this.role = role;
     }
      
-    @Override
+    
+    public Date getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+	@Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
         sb.append("***** Employee Details *****\n");
@@ -61,7 +70,7 @@ public class Employee {
         sb.append("Permanent="+isPermanent()+"\n");
         sb.append("Role="+getRole()+"\n");
         sb.append("Phone Numbers="+Arrays.toString(getPhoneNumbers())+"\n");
-        sb.append("Address="+getAddress()+"\n");
+        sb.append("Address="+ Arrays.toString(getAddress())+"\n");
         sb.append("Cities="+Arrays.toString(getCities().toArray())+"\n");
         sb.append("Properties="+getProperties()+"\n");
         sb.append("*****************************");

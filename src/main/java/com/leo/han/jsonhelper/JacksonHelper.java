@@ -1,12 +1,13 @@
-package com.leo.han.jackson;
+package com.leo.han.jsonhelper;
 
 import java.io.IOException;
+
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class JacksonHelper<T> {
+public class JacksonHelper<T> implements JsonHelper<T>{
 
 	private ObjectMapper objectMapper;
 
@@ -15,7 +16,7 @@ public class JacksonHelper<T> {
 		objectMapper = new ObjectMapper();
 	}
 
-	public String ObjectToJSON(T object) throws JsonProcessingException {
+	public String ObjectToJSON(T object) throws JsonProcessingException  {
 		String json = objectMapper.writeValueAsString(object);
 		return json;
 	}
